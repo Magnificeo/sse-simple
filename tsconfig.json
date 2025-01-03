@@ -1,0 +1,32 @@
+{
+  "extends": "@tsconfig/node22/tsconfig.json",
+  "compilerOptions": {
+    "baseUrl": "./",
+    "paths": {
+      "#app/*": ["app/*"]
+    },
+    // Override
+    "module": "Preserve",
+    "moduleResolution": "bundler",
+    /* Base */
+    "resolveJsonModule": true,
+    "moduleDetection": "force",
+    "isolatedModules": true,
+    "verbatimModuleSyntax": true,
+    "forceConsistentCasingInFileNames": true,
+    /* More strictness */
+    "noPropertyAccessFromIndexSignature": true,
+    "noUncheckedIndexedAccess": true,
+    "exactOptionalPropertyTypes": true,
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitReturns": true,
+    "noImplicitOverride": true,
+    /* Transpiling */
+    "outDir": "dist",
+    "rootDir": "app",
+    "sourceMap": true
+  },
+  "include": ["app/**/*"],
+  /* node_modules игнорируется по умолчанию */
+  "exclude": ["dist", "prisma"]
+}
